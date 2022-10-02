@@ -11,22 +11,23 @@
   width: 60%;
   padding: 0;
 
-  section {
-    width: 50%;
-    display: inline;
-    height: 80vh;
+  .welcomeContent {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    overflow-y: hidden;
+    height: 100%;
   }
 
   section:nth-child(1) {
-    float: left;
     background: var(--sidebar);
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-y: hidden;
   }
 
   section:nth-child(2) {
-    float: right;
+    overflow-y: auto;
 
     .content {
       padding: 20px;
@@ -138,7 +139,6 @@
   width: 100%;
   height: 100%;
   border-radius: 20px;
-  border: none;
   outline: none;
   padding: 50px;
   background: var(--sidebar);
@@ -194,10 +194,6 @@ a.privacy {
     width: 85%;
     height: 90%;
   }
-
-  section {
-    height: 90vh !important;
-  }
 }
 
 @media (max-width: 1300px) {
@@ -214,20 +210,16 @@ a.privacy {
     bottom: 1rem !important;
     right: -1rem !important;
   }
-
-  section {
-    height: 100vh !important;
-  }
 }
 
-@media (max-width: 1190px) { 
+@media (max-width: 1190px) {
   .welcomemodal {
     width: 90%;
     height: 90%;
   }
 }
 
-@media (max-width: 800px) { 
+@media (max-width: 800px) {
   .welcomemodal {
     width: 100%;
     height: 100%;
@@ -235,9 +227,5 @@ a.privacy {
 
   .examples img {
     width: 15rem !important;
-  }
-
-  section {
-    height: 140vh !important;
   }
 }
